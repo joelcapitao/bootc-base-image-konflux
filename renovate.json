@@ -33,7 +33,7 @@
         ],
         "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
         "recreateWhen": "always",
-        "rebaseWhen": "behind-base-branch"
+        "rebaseWhen": "never"
       }
     ]
   },
@@ -51,6 +51,7 @@
         "at any time"
       ],
       "automerge": true
+      "rebaseWhen": "never"
     },
     {
       "matchPackageNames": [
@@ -62,6 +63,7 @@
         "at any time"
       ],
       "automerge": true
+      "rebaseWhen": "never"
     },
     {
       "matchPackageNames": [
@@ -73,6 +75,7 @@
         "at any time"
       ],
       "automerge": true
+      "rebaseWhen": "never"
     }
   ]
 }
