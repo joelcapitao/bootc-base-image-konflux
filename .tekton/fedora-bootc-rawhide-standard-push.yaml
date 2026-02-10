@@ -25,7 +25,7 @@ metadata:
       )
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: fedora-bootc-rawhide
+    appstudio.openshift.io/application: bootc-base-images
     appstudio.openshift.io/component: fedora-bootc-rawhide-standard
     pipelines.appstudio.openshift.io/type: build
   name: fedora-bootc-rawhide-standard-on-push

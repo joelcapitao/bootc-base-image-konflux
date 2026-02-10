@@ -22,7 +22,7 @@ metadata:
       )
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: fedora-bootc-42
+    appstudio.openshift.io/application: bootc-base-images
     appstudio.openshift.io/component: fedora-bootc-42-minimal
     pipelines.appstudio.openshift.io/type: build
   name: fedora-bootc-42-minimal-on-pull-request

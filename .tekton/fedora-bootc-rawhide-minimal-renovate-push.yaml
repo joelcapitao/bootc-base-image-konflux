@@ -21,7 +21,7 @@ metadata:
       ) && true == false
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: fedora-bootc-rawhide
+    appstudio.openshift.io/application: bootc-base-images
     appstudio.openshift.io/component: fedora-bootc-rawhide-minimal
     pipelines.appstudio.openshift.io/type: build
     release.appstudio.openshift.io/auto-release: "false"

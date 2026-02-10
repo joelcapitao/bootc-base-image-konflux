@@ -21,7 +21,7 @@ metadata:
       )
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: fedora-bootc-43
+    appstudio.openshift.io/application: bootc-base-images
     appstudio.openshift.io/component: fedora-bootc-43-minimal
     pipelines.appstudio.openshift.io/type: build
     release.appstudio.openshift.io/auto-release: "false"
