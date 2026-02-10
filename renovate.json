@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>platform-engineering-org/.github"
+    "github>platform-engineering-org/.github",
+    "github>konflux-ci/mintmaker//config/renovate/renovate.json"
   ],
   "dependencyDashboard": true,
   "automergeType": "branch",
