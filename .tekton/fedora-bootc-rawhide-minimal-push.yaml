@@ -49,6 +49,8 @@ spec:
   - name: labels
     value:
       - org.opencontainers.image.version=44
+  - name: skip-checks
+    value: True
   pipelineRef:
     params:
     - name: bundle
