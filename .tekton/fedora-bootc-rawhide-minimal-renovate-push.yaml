@@ -35,9 +35,6 @@ spec:
   - name: build-platforms
     value:
     - linux/amd64
-    - linux/arm64
-    - linux/ppc64le
-    - linux/s390x
   - name: dockerfile
     value: Containerfile
   - name: path-context
