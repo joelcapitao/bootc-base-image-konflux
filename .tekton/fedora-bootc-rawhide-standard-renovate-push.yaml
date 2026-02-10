@@ -55,7 +55,7 @@ spec:
   - name: image-expires-after
     value: 5d
   - name: output-image
-    value: quay.io/konflux-jcapitao-rh/bootc-tenant/fedora-bootc-rawhide-standard:{{revision}}
+    value: quay.io/konflux-fedora/jcapitao-redhat-com-tenant/fedora-bootc-rawhide-standard:{{revision}}
   - name: labels
     value:
       - org.opencontainers.image.version=44

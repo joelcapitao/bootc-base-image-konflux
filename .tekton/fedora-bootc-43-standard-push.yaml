@@ -52,7 +52,7 @@ spec:
     - REPOS_IMAGE=quay.io/bootc-devel/fedora-bootc-43-compose:Fedora-43-updates-20260129.0@sha256:6cca2e955cc95413ee4f0e4c1385de21e753ae009357230ca478e12abcec3bdf
     - MANIFEST=fedora-standard
   - name: output-image
-    value: quay.io/konflux-jcapitao-rh/bootc-tenant/fedora-bootc-43-standard:{{revision}}
+    value: quay.io/konflux-fedora/jcapitao-redhat-com-tenant/fedora-bootc-43-standard:{{revision}}
   - name: labels
     value:
       - org.opencontainers.image.version=43

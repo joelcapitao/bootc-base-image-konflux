@@ -52,7 +52,7 @@ spec:
     - REPOS_IMAGE=quay.io/bootc-devel/fedora-bootc-rawhide-compose:Fedora-Rawhide-20260126.n.0@sha256:821c4506243f80e735a4e756adbd2c0422e7e290271e1eaefd8996f96c60d791
     - MANIFEST=fedora-standard
   - name: output-image
-    value: quay.io/konflux-jcapitao-rh/bootc-tenant/fedora-bootc-rawhide-standard:{{revision}}
+    value: quay.io/konflux-fedora/jcapitao-redhat-com-tenant/fedora-bootc-rawhide-standard:{{revision}}
   - name: labels
     value:
       - org.opencontainers.image.version=44
