@@ -1,1 +1,2 @@
-RUN echo test
+FROM alpine:3.21
+LABEL test=test
