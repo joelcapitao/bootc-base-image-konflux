@@ -18,26 +18,28 @@
   "baseBranchPatterns": [
     "main"
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": [
+        "Update 'REPOS_IMAGE' and 'BUILDER_IMAGE' in tekton files"
+      ],
+      "managerFilePatterns": [
+        "/.tekton/.*\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "REPOS_IMAGE=(?<depName>.*):(?<currentValue>.*)@(?<currentDigest>.*)\\n",
+        "BUILDER_IMAGE=(?<depName>.*):(?<currentValue>.*)@(?<currentDigest>.*)\\n"
+      ],
+      "versioningTemplate": "regex:(?<compatibility>.*)-(?<patch>\\d{8})(\\.n)?\\.(?<build>\\d)",
+      "datasourceTemplate": "docker"
+    }
+  ],
   "packageRules": [
     {
+      "matchManagers": ["tekton", "custom.regex"],
       "matchPackageNames": [
-        "/quay.io/bootc-devel/tekton-catalog//",
-        "/quay.io/bootc-devel/fedora-bootc-42-compose/"
-      ],
-      "matchFileNames": [".tekton/fedora-bootc-42-*"],
-      "groupName": "Fedora 42 dependencies",
-      "groupSlug": "fedora-42-dependencies",
-      "branchPrefix": "renovate/fedora-42/",
-      "commitMessageTopic": "Fedora 42 dependencies",
-      "prBodyColumns": ["Package", "Change", "Notes"],
-      "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
-      "schedule": ["at any time"],
-      "recreateWhen": "always",
-      "rebaseWhen": "never"
-    },
-    {
-      "matchPackageNames": [
-        "/quay.io/bootc-devel/tekton-catalog//",
+        "/quay.io/bootc-devel/tekton-catalog/",
         "/quay.io/bootc-devel/fedora-bootc-43-compose/"
       ],
       "matchFileNames": [".tekton/fedora-bootc-43-*"],
@@ -52,9 +54,10 @@
       "rebaseWhen": "never"
     },
     {
+      "matchManagers": ["tekton", "custom.regex"],
       "matchPackageNames": [
-        "/quay.io/bootc-devel/tekton-catalog//",
-        "/quay.io/bootc-devel/fedora-bootc-rawhide-compose//"
+        "/quay.io/bootc-devel/tekton-catalog/",
+        "/quay.io/bootc-devel/fedora-bootc-rawhide-compose/"
       ],
       "matchFileNames": [".tekton/fedora-bootc-rawhide-*"],
       "groupName": "Fedora rawhide dependencies",
@@ -65,7 +68,8 @@
       "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
       "schedule": ["at any time"],
       "recreateWhen": "always",
-      "rebaseWhen": "never"
+      "rebaseWhen": "never",
+      "additionalBranchPrefix": ""
     }
   ]
 }
