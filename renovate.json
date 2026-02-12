@@ -6,6 +6,10 @@
   ],
   "dependencyDashboard": true,
   "automergeType": "pr",
+  "enabledManagers": [
+    "custom.regex",
+    "tekton"
+  ],
   "tekton": {
     "additionalBranchPrefix": "",
     "includePaths": [
@@ -49,9 +53,11 @@
       "commitMessageTopic": "Fedora 43 dependencies",
       "prBodyColumns": ["Package", "Change", "Notes"],
       "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
-      "schedule": ["at any time"],
+      "schedule": ["after 2am and before 5am"],
+      "timezone": "UTC",
       "recreateWhen": "always",
-      "rebaseWhen": "never"
+      "rebaseWhen": "never",
+      "additionalBranchPrefix": ""
     },
     {
       "matchManagers": ["tekton", "custom.regex"],
@@ -66,7 +72,8 @@
       "commitMessageTopic": "Fedora rawhide dependencies",
       "prBodyColumns": ["Package", "Change", "Notes"],
       "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
-      "schedule": ["at any time"],
+      "schedule": ["after 2am and before 5am"],
+      "timezone": "UTC",
       "recreateWhen": "always",
       "rebaseWhen": "never",
       "additionalBranchPrefix": ""
