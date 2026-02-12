@@ -51,7 +51,8 @@
       "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
       "schedule": ["at any time"],
       "recreateWhen": "always",
-      "rebaseWhen": "never"
+      "rebaseWhen": "never",
+      "additionalBranchPrefix": ""
     },
     {
       "matchManagers": ["tekton", "custom.regex"],
@@ -70,6 +71,13 @@
       "recreateWhen": "always",
       "rebaseWhen": "never",
       "additionalBranchPrefix": ""
+    },
+    {
+      "description": "Update tekton-catalog images only between 2-5 AM UTC daily",
+      "matchManagers": ["tekton"],
+      "matchPackageNames": ["/quay.io/bootc-devel/tekton-catalog/"],
+      "schedule": ["after 2am and before 5am"],
+      "timezone": "UTC"
     }
   ]
 }
