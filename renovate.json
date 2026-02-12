@@ -1,5 +1,26 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": [
+    "Renovate configuration for bootc-base-image-konflux repository.",
+    "",
+    "This configuration separates updates into different PRs per release (e.g., Fedora 43, Rawhide)",
+    "to prevent blocking all releases if tests fail on one.",
+    "",
+    "Update schedules:",
+    "- Fedora 43 bootc-pipeline: 2-5 AM UTC daily",
+    "- Fedora 43 REPOS_IMAGE: at any time",
+    "- Rawhide bootc-pipeline: at any time",
+    "- Rawhide REPOS_IMAGE: at any time",
+    "",
+    "Each update type (bootc-pipeline, REPOS_IMAGE) also has its own PR",
+    "for independent review and merge.",
+    "",
+    "rebaseWhen is set to 'never' for REPOS_IMAGE PRs because as different PRs",
+    "for each release are merged to main, automatic rebasing would reset pipelines",
+    "and cause tests to rerun multiple times. The operator can manually rebase if needed.",
+    "",
+    "Automerge is enabled for all PRs - they will be merged automatically when all checks pass."
+  ],
   "extends": [
     "github>platform-engineering-org/.github",
     "github>konflux-ci/mintmaker//config/renovate/renovate.json"
@@ -51,7 +72,8 @@
       "timezone": "UTC",
       "recreateWhen": "always",
       "rebaseWhen": "always",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "automerge": true
     },
     {
       "matchManagers": ["custom.regex"],
@@ -64,7 +86,8 @@
       "schedule": ["at any time"],
       "recreateWhen": "always",
       "rebaseWhen": "never",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "automerge": true
     },
     {
       "matchManagers": ["tekton"],
@@ -78,7 +101,8 @@
       "timezone": "UTC",
       "recreateWhen": "always",
       "rebaseWhen": "always",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "automerge": true
     },
     {
       "matchManagers": ["custom.regex"],
@@ -91,7 +115,8 @@
       "schedule": ["at any time"],
       "recreateWhen": "always",
       "rebaseWhen": "never",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "automerge": true
     }
   ]
 }
