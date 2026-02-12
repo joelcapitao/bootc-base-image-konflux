@@ -46,7 +46,7 @@ spec:
     value: true
   - name: build-args
     value:
-    - REPOS_IMAGE=quay.io/bootc-devel/fedora-bootc-rawhide-compose:Fedora-Rawhide-20260126.n.0@sha256:821c4506243f80e735a4e756adbd2c0422e7e290271e1eaefd8996f96c60d791
+    - REPOS_IMAGE=quay.io/bootc-devel/fedora-bootc-rawhide-compose:Fedora-Rawhide-20260212.n.0@sha256:25b77bd87f805580552ea5851d705e2aff15744a0fafdd3b2619b305a5716746
     - MANIFEST=fedora-standard
   - name: output-image
     value: quay.io/konflux-fedora/jcapitao-redhat-com-tenant/fedora-bootc-rawhide-standard:{{revision}}
@@ -58,7 +58,7 @@ spec:
   pipelineRef:
     params:
     - name: bundle
-      value: quay.io/bootc-devel/tekton-catalog/pipeline-buildah-build-bootc-multi-platform-oci-ta@sha256:d29a4d1bc4f331a327e23d96ba48e4cdd2d8e732078faf6970dd9657e9b817e6
+      value: quay.io/bootc-devel/tekton-catalog/pipeline-buildah-build-bootc-multi-platform-oci-ta@sha256:2678dd50429012f562c349ad52bce30f4bba3a0f6832b874c303e418d5b8a4ae
     - name: name
       value: buildah-build-bootc-multi-platform-oci-ta
     - name: kind
