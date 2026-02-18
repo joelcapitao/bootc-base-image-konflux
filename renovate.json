@@ -89,7 +89,7 @@
       "commitMessageTopic": "Fedora 42 REPOS_IMAGE",
       "schedule": ["at any time"],
       "recreateWhen": "always",
-      "rebaseWhen": "never",
+      "rebaseWhen": "always",
       "additionalBranchPrefix": "",
       "automerge": true
     },
@@ -118,7 +118,7 @@
       "commitMessageTopic": "Fedora 43 REPOS_IMAGE",
       "schedule": ["at any time"],
       "recreateWhen": "always",
-      "rebaseWhen": "never",
+      "rebaseWhen": "always",
       "additionalBranchPrefix": "",
       "automerge": true
     },
@@ -147,7 +147,7 @@
       "commitMessageTopic": "Fedora 44 REPOS_IMAGE",
       "schedule": ["at any time"],
       "recreateWhen": "always",
-      "rebaseWhen": "never",
+      "rebaseWhen": "always",
       "additionalBranchPrefix": "",
       "automerge": true
     },
@@ -176,7 +176,7 @@
       "commitMessageTopic": "Fedora Rawhide REPOS_IMAGE",
       "schedule": ["at any time"],
       "recreateWhen": "always",
-      "rebaseWhen": "never",
+      "rebaseWhen": "always",
       "additionalBranchPrefix": "",
       "automerge": true
     }
