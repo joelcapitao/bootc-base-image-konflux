@@ -65,6 +65,12 @@
   ],
   "packageRules": [
     {
+      "description": "Disable REPOS_IMAGE updates for 44-minimal and rawhide-minimal variant files",
+      "matchManagers": ["custom.regex"],
+      "matchFileNames": [".tekton/*-44-minimal-*", ".tekton/*-rawhide-minimal-*"],
+      "enabled": false
+    },
+    {
       "matchManagers": ["tekton"],
       "matchPackageNames": ["/quay.io/bootc-devel/tekton-catalog/"],
       "matchFileNames": [".tekton/fedora-bootc-42-*"],
