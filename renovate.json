@@ -34,17 +34,25 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["custom.regex"],
-      "matchPackageNames": ["/quay.io/centos-bootc/centos-bootc/"],
-      "matchFileNames": ["build-args-c10s.conf"],
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchPackageNames": [
+        "/quay.io/centos-bootc/centos-bootc/"
+      ],
+      "matchFileNames": [
+        "build-args-c10s.conf"
+      ],
       "groupName": "CentOS Stream 10 bootc updates",
       "groupSlug": "c10s",
       "branchPrefix": "mintmaker/",
       "commitMessageTopic": "CentOS Stream 10 bootc base container image",
-      "schedule": ["at any time"],
+      "schedule": [
+        "at any time"
+      ],
       "recreateWhen": "always",
       "rebaseWhen": "always",
-      "requiredStatusChecks": null
+      "ignoreTests": true
     }
   ]
 }
